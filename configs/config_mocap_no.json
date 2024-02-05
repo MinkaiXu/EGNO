@@ -1,0 +1,23 @@
+{
+        "exp_name": "mocap_exp",
+        "batch_size": 12,
+        "epochs": 2000,
+        "no_cuda": false,
+        "seed": 1,
+        "lr": 0.0005,
+        "nf": 128,
+        "model": "egno",
+        "attention": 0,
+        "n_layers": 6,
+        "max_training_samples": 200,
+        "data_dir": "motion/dataset",
+        "norm_diff": false,
+        "learnable": false,
+        "weight_decay": 1e-10,
+        "tanh": false,
+        "delta_frame": 30,
+        "case": "run",
+        "num_timesteps": 5,
+        "time_emb_dim": 32,
+        "num_modes": 2
+}

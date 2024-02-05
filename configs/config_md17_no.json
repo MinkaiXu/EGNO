@@ -1,0 +1,21 @@
+{
+        "exp_name": "md17_exp",
+        "num_timesteps": 8,
+        "batch_size": 100,
+        "epochs": 5000,
+        "no_cuda": false,
+        "seed": 1,
+        "lr": 0.0001,
+        "nf": 64,
+        "model": "egno",
+        "attention": 0,
+        "n_layers": 5,
+        "max_training_samples": 500,
+        "data_dir": "md17",
+        "norm_diff": false,
+        "learnable": false,
+        "weight_decay": 1e-15,
+        "tanh": false,
+        "delta_frame": 3000,
+        "mol": "benzene_old"
+}
