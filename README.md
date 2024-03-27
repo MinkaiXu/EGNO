@@ -6,7 +6,7 @@
 
 This repository contains the official implementation of our [Equivariant Graph Neural Operator](https://arxiv.org/abs/2401.11037).
 
-> [**Equivariant Graph Neural Operator for Modeling 3D Dynamics**](https://arxiv.org/abs/2401.11708)   
+> [**Equivariant Graph Neural Operator for Modeling 3D Dynamics**](https://arxiv.org/abs/2401.11037)   
 > Minkai Xu*, Jiaqi Han*, Aaron Lou, Jean Kossaifi, Arvind Ramanathan, Kamyar Azizzadenesheli, Jure Leskovec, Stefano Ermon, Anima Anandkumar
 > <br>**Stanford University, NVIDIA, Argonne National Laboratory, California Institute of Technology**<br>
 
