@@ -225,6 +225,7 @@ def train(model, optimizer, epoch, loader, backprop=True):
         data = [d.to(device) for d in data]
         loc, vel, edges, edge_attr, local_edge_index, local_edge_fea, Z, loc_end, vel_end = data
         # convert into graph minibatch
+        loc_mean = loc.mean(dim=1, keepdim=True).repeat(1, n_nodes, 1).view(-1, loc.size(2))  # [BN, 3]
         loc = loc.view(-1, loc.size(2))
 
         optimizer.zero_grad()
@@ -235,7 +236,7 @@ def train(model, optimizer, epoch, loader, backprop=True):
             rows, cols = edges
             loc_dist = torch.sum((loc[rows] - loc[cols])**2, 1).unsqueeze(1)  # relative distances among locations
             edge_attr = torch.cat([edge_attr, loc_dist], 1).detach()  # concatenate all edge properties
-            loc_pred, vel_pred, _ = model(loc, nodes, edges, edge_attr, v=vel)
+            loc_pred, vel_pred, _ = model(loc, nodes, edges, edge_attr, v=vel, loc_mean=loc_mean)
         else:
             raise Exception("Wrong model")
 
